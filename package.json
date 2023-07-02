@@ -1,0 +1,19 @@
+{
+  "name": "react-in-work",
+  "version": "1.0.0",
+  "description": "This is React Exploration Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Manoj Kondke",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kondkemanoj1/react-in-work.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kondkemanoj1/react-in-work/issues"
+  },
+  "homepage": "https://github.com/kondkemanoj1/react-in-work#readme"
+}
