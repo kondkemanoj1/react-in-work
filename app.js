@@ -31,6 +31,20 @@ const foodData = [
     cuisines: ["Beverages", "Fast Food", "Snacks"],
     cloudinaryImageId: "47a5a4f1020f6715556094680749bada",
   },
+  {
+    name: "Pizza Bites",
+    slaString: "32 MINS",
+    costForTwoString: "₹300 FOR TWO",
+    cuisines: ["Pizzas", "Italian", "Pastas", "Desserts"],
+    cloudinaryImageId: "be87ef87d60b0e6baa2a24c080065c30",
+  },
+  {
+    name: "Burger King",
+    slaString: "22 MINS",
+    costForTwoString: "₹350 FOR TWO",
+    cuisines: ["Burgers", "American"],
+    cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+  },
 ];
 
 const HeaderComponent = (props) => {
@@ -68,7 +82,9 @@ const CardComponent = (props) => {
       <div>
         <strong>{name}</strong>
         <br></br>
-        <em>{cuisines.join(",")}</em>
+        <em style={{ fontSize: "14px", color: "gray" }}>
+          {cuisines.join(", ")}
+        </em>
       </div>
       <p class="starContainer">
         <span>{slaString}</span>
@@ -83,6 +99,12 @@ const FoodListComponent = () => {
     return <CardComponent {...food}></CardComponent>;
   });
 };
+
+const FooterComponent = () => {
+  return (
+    <div class="footer">&copy; Copyright Reserved By Manoj Kondke @2023</div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
@@ -90,5 +112,6 @@ root.render(
     <div className="restaurantContainer">
       <FoodListComponent />
     </div>
+    <FooterComponent></FooterComponent>
   </>
 );
