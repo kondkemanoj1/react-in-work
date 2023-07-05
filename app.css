@@ -1,5 +1,55 @@
-#heading {
-  color: rgb(59, 102, 161);
-  font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
+.body {
+  font-family: sans-serif;
+}
+.headerMenu li {
+  list-style-type: none;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 10px;
+  margin-right: 25px;
+  font-weight: 600;
+  color: darkcyan;
+}
+.header h1 {
+  color: firebrick;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background: cornsilk;
+}
+.card {
+  height: 250px;
+  width: 250px;
+}
+
+.card div {
+  margin-left: 10px;
+}
+
+.card p {
+  font-size: 12px;
+  color: gray;
+  margin: 10px;
+  padding: 0 !important;
+}
+.card p span {
+  font-size: 12px;
+  color: gray;
+  margin: 10px;
+}
+.starContainer::before {
+  content: "★ 4.0";
+  background: #48c479;
+  color: white;
+  padding: 4px;
+}
+.restaurantContainer {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(1);
 }
