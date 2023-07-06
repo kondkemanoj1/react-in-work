@@ -70,7 +70,7 @@ const CardComponent = (props) => {
   const { name, slaString, costForTwoString, cuisines, cloudinaryImageId } =
     props;
   return (
-    <div class="card">
+    <div className="card">
       <p>
         <img
           height="160"
@@ -86,7 +86,7 @@ const CardComponent = (props) => {
           {cuisines.join(", ")}
         </em>
       </div>
-      <p class="starContainer">
+      <p className="starContainer">
         <span>{slaString}</span>
         <span>{costForTwoString}</span>
       </p>

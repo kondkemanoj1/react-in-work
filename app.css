@@ -25,6 +25,8 @@
 .card {
   height: 250px;
   width: 250px;
+  flex-basis: 25%;
+  margin-top: 10px;
 }
 
 .card div {
@@ -53,15 +55,13 @@
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: oblique;
   font-size: 14px;
   width: 100%;
-  position: absolute;
   bottom: 0;
   padding: 10px 0px;
   text-align: center;
