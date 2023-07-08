@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 const heading = <h1>Food Villa - By Manoj</h1>;
 const foodData = [
   {
+    id: 1,
     name: "Pizza Bites",
     slaString: "32 MINS",
     costForTwoString: "₹300 FOR TWO",
@@ -11,6 +12,7 @@ const foodData = [
     cloudinaryImageId: "be87ef87d60b0e6baa2a24c080065c30",
   },
   {
+    id: 2,
     name: "Burger King",
     slaString: "22 MINS",
     costForTwoString: "₹350 FOR TWO",
@@ -18,6 +20,7 @@ const foodData = [
     cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
   },
   {
+    id: 3,
     name: "Pizza Hut",
     slaString: "38 MINS",
     costForTwoString: "₹600 FOR TWO",
@@ -25,6 +28,7 @@ const foodData = [
     cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
   },
   {
+    id: 4,
     name: "Tea Post",
     slaString: "52 MINS",
     costForTwoString: "₹400 FOR TWO",
@@ -32,6 +36,7 @@ const foodData = [
     cloudinaryImageId: "47a5a4f1020f6715556094680749bada",
   },
   {
+    id: 5,
     name: "Pizza Bites",
     slaString: "32 MINS",
     costForTwoString: "₹300 FOR TWO",
@@ -39,6 +44,7 @@ const foodData = [
     cloudinaryImageId: "be87ef87d60b0e6baa2a24c080065c30",
   },
   {
+    id: 6,
     name: "Burger King",
     slaString: "22 MINS",
     costForTwoString: "₹350 FOR TWO",
@@ -54,7 +60,7 @@ const HeaderComponent = (props) => {
       <img
         height="100"
         width="100"
-        src="https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg"
+        src="https://content.jdmagicbox.com/comp/delhi/u4/011pxx11.xx11.200225192016.u8u4/catalogue/foodvilla-the-catering-co-karkardooma-delhi-9s5uw8jrt1.jpg"
       />
       <span> {heading}</span>
       <ul className="headerMenu">
@@ -96,13 +102,15 @@ const CardComponent = (props) => {
 
 const FoodListComponent = () => {
   return foodData.map((food) => {
-    return <CardComponent {...food}></CardComponent>;
+    return <CardComponent key={food.id} {...food}></CardComponent>;
   });
 };
 
 const FooterComponent = () => {
   return (
-    <div class="footer">&copy; Copyright Reserved By Manoj Kondke @2023</div>
+    <div className="footer">
+      &copy; Copyright Reserved By Manoj Kondke @2023
+    </div>
   );
 };
 const root = ReactDOM.createRoot(document.getElementById("root"));
