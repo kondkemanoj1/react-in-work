@@ -1,6 +1,7 @@
+import "./header.css";
+
 const heading = <h1>Food Villa - By Manoj</h1>;
 export const HeaderComponent = (props) => {
-  const { title } = props;
   return (
     <div className="header">
       <img

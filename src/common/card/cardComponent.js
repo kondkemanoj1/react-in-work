@@ -1,3 +1,5 @@
+import "./card.css";
+
 export const CardComponent = (props) => {
   const { name, slaString, costForTwoString, cuisines, cloudinaryImageId } =
     props;

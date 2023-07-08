@@ -1,0 +1,11 @@
+.footer {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: oblique;
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0px;
+  text-align: center;
+  background: cornflowerblue;
+  color: white;
+}

@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e6e6e6;
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-around;
+  padding-left: 0px;
+}
+.headerMenu li {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: darkcyan;
+}
+.header h1 {
+  color: firebrick;
+}
+.header img {
+  flex: 0 1 50px;
+}
+.header span {
+  justify-content: center;
+  display: flex;
+  flex: 3;
+  font-size: auto;
+}
