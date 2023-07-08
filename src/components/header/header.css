@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #e6e6e6;
+  background: #97d1e6;
 }
 
 .headerMenu {
@@ -14,15 +14,17 @@
 }
 .headerMenu li {
   list-style-type: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  color: darkcyan;
+  color: white;
+  text-shadow: 1px 1px lightgray;
+  font-style: italic;
 }
 .header h1 {
-  color: firebrick;
+  color: rgb(95, 77, 146);
 }
 .header img {
-  flex: 0 1 50px;
+  flex: 0 1 120px;
 }
 .header span {
   justify-content: center;

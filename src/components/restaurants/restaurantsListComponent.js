@@ -4,6 +4,8 @@ import "./restaurants.css";
 
 export const RestaurantsListComponent = () => {
   return foodData.map((food) => {
-    return <CardComponent key={food.id} {...food.data}></CardComponent>;
+    return <CardComponent key={food.data.id} {...food.data}></CardComponent>;
   });
 };
+
+export default RestaurantsListComponent;
