@@ -11,9 +11,15 @@ export const HeaderComponent = (props) => {
       />
       <span> {heading}</span>
       <ul className="headerMenu">
-        <li> Home</li>
-        <li>Contact Us</li>
-        <li>About Us</li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about">About Us</a>
+        </li>
+        <li>
+          <a href="/contact">Contact Us</a>
+        </li>
       </ul>
     </div>
   );

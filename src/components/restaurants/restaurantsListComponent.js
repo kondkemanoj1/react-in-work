@@ -4,7 +4,7 @@ import "./restaurants.css";
 import SearchComponent from "../../common/search/searchComponent";
 import ShimmerComponent from "../../common/shimmer/shimmerComponent";
 
-export const RestaurantsListComponent = (props) => {
+const RestaurantsListComponent = (props) => {
   const [restaurants, setRestaurants] = useState([]);
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");

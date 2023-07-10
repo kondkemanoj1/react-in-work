@@ -20,9 +20,13 @@
   text-shadow: 1px 1px lightgray;
   font-style: italic;
 }
+.headerMenu a {
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+}
 .header h1 {
   color: black;
-  font-style: oblique;
 }
 .header img {
   flex: 0 1 120px;
