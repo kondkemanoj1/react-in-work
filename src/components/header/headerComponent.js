@@ -7,7 +7,7 @@ export const HeaderComponent = (props) => {
       <img
         height="80"
         width="120"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQplfEnfHTrbXjlEZOEQ2GcHnfRtehsHwSNDalDGNA&s"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOGs9eSh4qe3qMi-bzXTJHCmUMcR4xgoUpEa-xTkgzzt616Kxdh12WOBoufoOzDcdtvds&usqp=CAU"
       />
       <span> {heading}</span>
       <ul className="headerMenu">

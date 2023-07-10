@@ -7,6 +7,10 @@
 .searchInput {
   padding: 10px;
   margin-right: 10px;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: oblique;
 }
 button {
   background: rgb(55, 177, 217);
@@ -19,4 +23,5 @@ button {
 input.searchInput :focus-visible {
   place-content: "";
   border: 1px solid chartreuse;
+  width: 200px;
 }

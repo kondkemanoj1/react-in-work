@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./search.css";
-const SearchComponent = () => {
-  // const [searchText, setSearchText] = useState < String > "";
-  const searchText = "";
-
+const SearchComponent = (props) => {
+  const [searchText, setSearchText] = useState("");
+  const { handleSearchTextChange, handleSearchClicked } = props;
   return (
     <div className="searchContainer">
       <input
@@ -11,8 +10,19 @@ const SearchComponent = () => {
         className="searchInput"
         placeholder="Search..."
         value={searchText}
+        onChange={(e) => {
+          setSearchText(e.target.value);
+          handleSearchTextChange(e.target.value);
+        }}
       />
-      <button type="button" name="search" value="Search">
+      <button
+        type="button"
+        name="search"
+        value="Search"
+        onClick={(e) => {
+          handleSearchClicked(e.target.value);
+        }}
+      >
         Search
       </button>
     </div>

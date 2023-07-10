@@ -21,10 +21,12 @@
   font-style: italic;
 }
 .header h1 {
-  color: rgb(95, 77, 146);
+  color: black;
+  font-style: oblique;
 }
 .header img {
   flex: 0 1 120px;
+  padding: 5px;
 }
 .header span {
   justify-content: center;
