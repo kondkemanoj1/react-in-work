@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
+import ShimmerComponent from "../../common/shimmer/shimmerComponent";
 import "./restaurantMenu.css";
 import { useEffect, useState } from "react";
 
 const RestaurantMenuComponent = () => {
   const params = useParams();
   const restaurantId = params?.id;
-  const [restaurantInfo, setRestaurantInfo] = useState({});
+  const [restaurantInfo, setRestaurantInfo] = useState(null);
   const [menuInfo, setMenuInfo] = useState([]);
 
   async function getData() {
@@ -25,7 +26,9 @@ const RestaurantMenuComponent = () => {
     getData();
   }, []);
 
-  return (
+  return !restaurantInfo ? (
+    <ShimmerComponent type="vertical" />
+  ) : (
     <div className="restaurantMenuContainer">
       <div className="menuHeader">
         <div className="leftheaderMenu">
@@ -102,13 +105,13 @@ const RestaurantMenuComponent = () => {
       ></p>
 
       <div style={{ marginTop: "20px" }}>
-        <h3>Menu ({menuInfo.length})</h3>
+        <h3>Menu ({menuInfo?.length})</h3>
       </div>
 
       <div className="menuItems margin20">
-        {menuInfo.map((menu) => {
+        {menuInfo?.map((menu) => {
           return (
-            <>
+            <div key={menu?.card?.info?.id}>
               <div className="menuHeader">
                 <div className="leftheaderMenu">
                   <h1
@@ -168,7 +171,7 @@ const RestaurantMenuComponent = () => {
                   borderBottom: "1px dotted lightgrey",
                 }}
               ></p>
-            </>
+            </div>
           );
         })}
       </div>

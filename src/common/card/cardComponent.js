@@ -1,11 +1,12 @@
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./card.css";
 
 const CardComponent = (props) => {
   const { id, name, slaString, costForTwoString, cuisines, cloudinaryImageId } =
     props;
+  const navigate = useNavigate();
   const goToRestaurantMenu = () => {
-    //Navigate({ to: "restaurant/" + id });
+    navigate("restaurant/" + id);
   };
   return (
     <div

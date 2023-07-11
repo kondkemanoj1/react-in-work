@@ -1,10 +1,17 @@
 import "./shimmer.css";
 
-const ShimmerComponent = () => {
+const ShimmerComponent = (prop) => {
+  const { type } = prop;
   return (
     <>
-      <div className="cardContainer">
-        <div className="shimmercard">
+      <div
+        className={"cardContainer " + (type === "vertical" ? "column" : "row")}
+      >
+        <div
+          className={
+            "shimmercard " + (type === "vertical" ? "columnWidth" : "rowWidth")
+          }
+        >
           <div className="shimmerBG media"></div>
           <div className="p-32">
             <div className="shimmerBG title-line"></div>
@@ -16,7 +23,11 @@ const ShimmerComponent = () => {
           </div>
         </div>
 
-        <div className="shimmercard">
+        <div
+          className={
+            "shimmercard " + (type === "vertical" ? "columnWidth" : "rowWidth")
+          }
+        >
           <div className="shimmerBG media"></div>
           <div className="p-32">
             <div className="shimmerBG title-line"></div>
@@ -28,7 +39,11 @@ const ShimmerComponent = () => {
           </div>
         </div>
 
-        <div className="shimmercard">
+        <div
+          className={
+            "shimmercard " + (type === "vertical" ? "columnWidth" : "rowWidth")
+          }
+        >
           <div className="shimmerBG media"></div>
           <div className="p-32">
             <div className="shimmerBG title-line"></div>
@@ -40,7 +55,11 @@ const ShimmerComponent = () => {
           </div>
         </div>
 
-        <div className="shimmercard">
+        <div
+          className={
+            "shimmercard " + (type === "vertical" ? "columnWidth" : "rowWidth")
+          }
+        >
           <div className="shimmerBG media"></div>
           <div className="p-32">
             <div className="shimmerBG title-line"></div>

@@ -6,8 +6,13 @@
   border-radius: 6px;
   height: 300px;
   overflow: hidden;
-  width: 250px;
   margin: 40px auto;
+}
+.rowWidth {
+  width: 250px;
+}
+.columnWidth {
+  width: 550px;
 }
 @-webkit-keyframes shimmer {
   0% {
@@ -65,6 +70,12 @@
 }
 .cardContainer {
   display: flex;
-  flex-direction: row;
+
   margin-bottom: 200px;
+}
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
 }

@@ -46,7 +46,7 @@ const RestaurantsListComponent = (props) => {
       />
 
       {allRestaurants.length === 0 ? (
-        <ShimmerComponent />
+        <ShimmerComponent type="horizontally" />
       ) : restaurants.length > 0 ? (
         <div className="restaurantContainer">
           {restaurants.map((food) => {
