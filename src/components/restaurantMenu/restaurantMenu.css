@@ -1,0 +1,13 @@
+.menuHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurantMenuContainer {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 0 350px 0 350px;
+}
+.margin20 {
+  margin-top: 40px;
+}

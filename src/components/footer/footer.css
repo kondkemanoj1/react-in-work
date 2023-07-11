@@ -8,4 +8,5 @@
   text-align: center;
   background: cornflowerblue;
   color: white;
+  align-self: flex-end;
 }

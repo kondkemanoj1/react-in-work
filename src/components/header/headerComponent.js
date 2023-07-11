@@ -1,4 +1,5 @@
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const heading = <h1>Food Villa - By Manoj</h1>;
 export const HeaderComponent = (props) => {
@@ -11,15 +12,15 @@ export const HeaderComponent = (props) => {
       />
       <span> {heading}</span>
       <ul className="headerMenu">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/about">About Us</a>
-        </li>
-        <li>
-          <a href="/contact">Contact Us</a>
-        </li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/about">
+          <li>About Us</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact Us</li>
+        </Link>
       </ul>
     </div>
   );

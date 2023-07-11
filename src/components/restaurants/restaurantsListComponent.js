@@ -1,4 +1,4 @@
-import { CardComponent } from "../../common/card/cardComponent";
+import CardComponent from "../../common/card/cardComponent";
 import { useState, useEffect } from "react";
 import "./restaurants.css";
 import SearchComponent from "../../common/search/searchComponent";
@@ -45,8 +45,9 @@ const RestaurantsListComponent = (props) => {
         handleSearchClicked={handleSearchClicked}
       />
 
-      {allRestaurants.length === 0 ? <ShimmerComponent /> : ""}
-      {restaurants.length > 0 ? (
+      {allRestaurants.length === 0 ? (
+        <ShimmerComponent />
+      ) : restaurants.length > 0 ? (
         <div className="restaurantContainer">
           {restaurants.map((food) => {
             return (

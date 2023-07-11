@@ -1,10 +1,19 @@
+import { Navigate } from "react-router-dom";
 import "./card.css";
 
-export const CardComponent = (props) => {
-  const { name, slaString, costForTwoString, cuisines, cloudinaryImageId } =
+const CardComponent = (props) => {
+  const { id, name, slaString, costForTwoString, cuisines, cloudinaryImageId } =
     props;
+  const goToRestaurantMenu = () => {
+    //Navigate({ to: "restaurant/" + id });
+  };
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        goToRestaurantMenu();
+      }}
+    >
       <p>
         <img
           src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`}
@@ -25,3 +34,4 @@ export const CardComponent = (props) => {
     </div>
   );
 };
+export default CardComponent;
