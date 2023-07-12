@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./restaurants.css";
 import SearchComponent from "../../common/search/searchComponent";
 import ShimmerComponent from "../../common/shimmer/shimmerComponent";
+import useOnline from "../../utils/hooks/useOnline";
 
 const RestaurantsListComponent = (props) => {
   const [restaurants, setRestaurants] = useState([]);
@@ -36,7 +37,15 @@ const RestaurantsListComponent = (props) => {
     getRestaurants();
   }, []);
 
-  console.log("result");
+  const isOnline = useOnline();
+
+  if (!isOnline) {
+    return (
+      <div className="offline">
+        <h1> ⛔️ Looks like you are offline. Please Connect to Internet</h1>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -45,7 +54,7 @@ const RestaurantsListComponent = (props) => {
         handleSearchClicked={handleSearchClicked}
       />
 
-      {allRestaurants.length === 0 ? (
+      {allRestaurants?.length === 0 ? (
         <ShimmerComponent type="horizontally" />
       ) : restaurants.length > 0 ? (
         <div className="restaurantContainer">
