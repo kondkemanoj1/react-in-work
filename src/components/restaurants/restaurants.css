@@ -7,3 +7,10 @@
   justify-content: center;
   justify-items: center;
 }
+.offline {
+  display: block;
+  padding: 100px;
+  text-align: center;
+  font-family: sans-serif;
+  color: red;
+}
