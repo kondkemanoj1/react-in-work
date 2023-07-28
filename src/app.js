@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { HeaderComponent } from "./components/header/headerComponent";
 import FooterComponent from "./components/footer/footerComponent";
@@ -11,9 +11,11 @@ import RestaurantMenuComponent from "./components/restaurantMenu/restaurantMenu"
 const AppLayout = (props) => {
   return (
     <>
-      <HeaderComponent />
-      <Outlet></Outlet>
-      <FooterComponent></FooterComponent>
+      <StrictMode>
+        <HeaderComponent />
+        <Outlet></Outlet>
+        <FooterComponent></FooterComponent>
+      </StrictMode>
     </>
   );
 };

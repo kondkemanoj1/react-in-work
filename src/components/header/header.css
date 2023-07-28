@@ -38,3 +38,7 @@
   flex: 3;
   font-size: auto;
 }
+.logoContainer {
+  background: linear-gradient(yellow, red, pink, rgb(213, 115, 205), purple);
+  padding: 1px;
+}

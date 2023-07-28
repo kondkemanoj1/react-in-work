@@ -11,3 +11,8 @@
 .margin20 {
   margin-top: 40px;
 }
+.restaurantMenuContainer img {
+  width: 100px;
+  height: 90px;
+  max-width: 100px !important;
+}

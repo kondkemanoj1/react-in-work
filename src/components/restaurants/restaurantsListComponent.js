@@ -14,8 +14,8 @@ const RestaurantsListComponent = (props) => {
   };
 
   function filterData(text) {
-    return allRestaurants.filter((item) =>
-      item.data.name.toLowerCase().includes(text.toLowerCase())
+    return allRestaurants?.filter((item) =>
+      item?.info?.name.toLowerCase().includes(text.toLowerCase())
     );
   }
 
@@ -25,12 +25,28 @@ const RestaurantsListComponent = (props) => {
   };
 
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.610917933460854&lng=73.74800976365805&page_type=DESKTOP_WEB_LISTING"
-    );
-    const result = await data.json();
-    setRestaurants(result?.data?.cards[2]?.data?.data?.cards);
-    setAllRestaurants(result?.data?.cards[2]?.data?.data?.cards);
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.610917933460854&lng=73.74800976365805&page_type=DESKTOP_WEB_LISTING"
+      );
+      const result = await data.json();
+      if (!result.statusCode) {
+        setRestaurants(
+          result?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+        );
+
+        setAllRestaurants(
+          result?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+        );
+      } else {
+        setRestaurants([]);
+        setAllRestaurants([]);
+      }
+    } catch (e) {
+      throw new Error(e);
+    }
   }
 
   useEffect(() => {
@@ -56,11 +72,11 @@ const RestaurantsListComponent = (props) => {
 
       {allRestaurants?.length === 0 ? (
         <ShimmerComponent type="horizontally" />
-      ) : restaurants.length > 0 ? (
+      ) : restaurants?.length > 0 ? (
         <div className="restaurantContainer">
           {restaurants.map((food) => {
             return (
-              <CardComponent key={food.data.id} {...food.data}></CardComponent>
+              <CardComponent key={food.info.id} {...food.info}></CardComponent>
             );
           })}
         </div>
